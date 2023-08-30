@@ -112,7 +112,7 @@ const updateFeed = async (feed) => {
     if (!route) return {
       type: 'feature',
       properties: {
-        routeColor: '#000000',
+        routeColor: '#FFFFFF',
       },
       geometry: {
         type: 'MultiLineString',
@@ -150,7 +150,7 @@ const updateFeed = async (feed) => {
     return {
       type: 'Feature',
       properties: {
-        routeColor: `#${routeColor}`,
+        routeColor: `#${routeColor === '000000' ? 'FFFFFF' : routeColor}`,
       },
       geometry: {
         type: 'MultiLineString',
