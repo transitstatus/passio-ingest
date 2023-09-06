@@ -138,7 +138,7 @@ const updateFeed = async (feed) => {
         type: 'LineString',
         coordinates: routePoints.filter((routePoint) => routePoint !== null),
       }, {
-        tolerance: 0.0001,
+        tolerance: 0.00001,
         highQuality: true,
       });
 
