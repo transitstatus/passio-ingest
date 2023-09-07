@@ -96,15 +96,16 @@ const updateFeed = async (feed) => {
     }
     return [route.color.replace('#', ''), route.myid]
   }).forEach((routeColor) => {
+    const actualColor = routeColor[0].toString().toUpperCase();
 
-    const busIcon = busTemplate.replaceAll("#FFFFFF", `#${routeColor[0]}`).replaceAll("#000000", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
+    const busIcon = busTemplate.replaceAll("#FFFFFF", `#${actualColor}`).replaceAll("#000000", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const busBuffer = Buffer.from(busIcon, 'utf8');
-    iconsRef.push(`${routeColor[0].toUpperCase()}_bus.png`);
+    iconsRef.push(`${actualColor.toUpperCase()}_bus.png`);
 
     sharp(busBuffer)
       .resize(64, 64)
       .png()
-      .toFile(`./data/${feed.username}/icons/${routeColor[0].toUpperCase()}_bus.png`, (err, info) => {
+      .toFile(`./data/${feed.username}/icons/${actualColor.toUpperCase()}_bus.png`, (err, info) => {
         if (err) throw err;
         //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
