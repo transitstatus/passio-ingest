@@ -21,7 +21,7 @@ const updateFeed = async (feed) => {
 
   console.log('Updating feed', feed.fullname);
 
-  const deviceIdReq = await fetch(`https://rutgers.passiogo.com/goServices.php?register=1&deviceId=0&token=${key}&platform=web&buildNo=undefined&oldToken=`, {
+  const deviceIdReq = await fetch(`https://passiogo.com/goServices.php?register=1&deviceId=0&token=${key}&platform=web&buildNo=undefined&oldToken=`, {
     "headers": {
       'Host': 'rutgers.passiogo.com',
       'User-Agent': 'Mozilla/ 5.0(Windows NT 10.0; Win64; x64; rv: 109.0) Gecko / 20100101 Firefox / 116.0',
@@ -43,7 +43,7 @@ const updateFeed = async (feed) => {
   const routesForm = `json=%7B%22systemSelected0%22%3A%22${feed.id}%22%2C%22amount%22%3A1%7D`;
   const stopsForm = `json=%7B%22s0%22%3A%22${feed.id}%22%2C%22sA%22%3A1%7D`;
 
-  const routesReq = await fetch(`https://passio3.com/www/mapGetData.php?getRoutes=1&deviceId=${deviceId}&wTransloc=1`, {
+  const routesReq = await fetch(`https://passiogo.com/mapGetData.php?getRoutes=1&deviceId=${deviceId}&wTransloc=1`, {
     "credentials": "omit",
     "headers": {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0",
@@ -61,7 +61,7 @@ const updateFeed = async (feed) => {
     "mode": "cors"
   });
 
-  const stopsReq = await fetch(`https://passio3.com/www/mapGetData.php?getStops=2&deviceId=${deviceId}&withOutdated=1&wBounds=1&showBusInOos=0&lat=undefined&lng=undefined&wTransloc=1`, {
+  const stopsReq = await fetch(`https://passiogo.com/mapGetData.php?getStops=2&deviceId=${deviceId}&withOutdated=1&wBounds=1&showBusInOos=0&lat=undefined&lng=undefined&wTransloc=1`, {
     "credentials": "omit",
     "headers": {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0",
@@ -88,18 +88,18 @@ const updateFeed = async (feed) => {
 
   routes.map((route) => {
     console.log(route);
-    return route.color.replace('#', '')
+    return [route.color.replace('#', ''), route.myid]
   }).forEach((routeColor) => {
-    const busIcon = busTemplate.replaceAll("#FFFFFF", `#${routeColor}`).replaceAll("#000000", '#FFFFFF');
+    const busIcon = busTemplate.replaceAll("#FFFFFF", `#${routeColor[0]}`).replaceAll("#000000", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const busBuffer = Buffer.from(busIcon, 'utf8');
-    iconsRef.push(`${routeColor}_bus.png`);
+    iconsRef.push(`${routeColor[0]}_bus.png`);
 
     sharp(busBuffer)
       .resize(64, 64)
       .png()
-      .toFile(`./data/${feed.username}/icons/${routeColor}_bus.png`, (err, info) => {
+      .toFile(`./data/${feed.username}/icons/${routeColor[0]}_bus.png`, (err, info) => {
         if (err) throw err;
-        console.log(`${routeColor}_bus.png generated for ${feed.fullname}`)
+        console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
 
   });
@@ -122,7 +122,7 @@ const updateFeed = async (feed) => {
 
     const routeColor = route.color.replace('#', '');
 
-    console.log(stops.routePoints[routeKey])
+    //console.log(stops.routePoints[routeKey])
     const routeLines = stops.routePoints[routeKey].map((routeLine) => {
       const routePoints = routeLine.map((routePoint) => {
         if (!routePoint) return null;
@@ -142,7 +142,7 @@ const updateFeed = async (feed) => {
         highQuality: true,
       });
 
-      console.log(simplifiedRoutePoints);
+      //console.log(simplifiedRoutePoints);
 
       return simplifiedRoutePoints.coordinates;
     });
