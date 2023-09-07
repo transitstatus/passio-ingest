@@ -87,9 +87,16 @@ const updateFeed = async (feed) => {
   let iconsRef = [];
 
   routes.map((route) => {
-    console.log(route);
+    if ((route.color === '#FF00FF' || route.color === '#ff00ff') && feed.username === 'rutgers') {
+      console.log('THIS ONE ITS THIS ONE RIGHT HERE THIS ONE YOU FUCKER')
+
+
+      console.log(route);
+
+    }
     return [route.color.replace('#', ''), route.myid]
   }).forEach((routeColor) => {
+
     const busIcon = busTemplate.replaceAll("#FFFFFF", `#${routeColor[0]}`).replaceAll("#000000", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const busBuffer = Buffer.from(busIcon, 'utf8');
     iconsRef.push(`${routeColor[0]}_bus.png`);
@@ -99,7 +106,7 @@ const updateFeed = async (feed) => {
       .png()
       .toFile(`./data/${feed.username}/icons/${routeColor[0]}_bus.png`, (err, info) => {
         if (err) throw err;
-        console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
+        //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
 
   });
