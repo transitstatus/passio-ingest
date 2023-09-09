@@ -83,6 +83,9 @@ const updateFeed = async (feed) => {
   const routes = await routesReq.json();
   const stops = await stopsReq.json();
 
+  fs.writeFileSync('./routes.json', JSON.stringify(routes));
+  fs.writeFileSync('./stops.json', JSON.stringify(stops));
+
   const busTemplate = fs.readFileSync('./templates/bus.svg', 'utf8');
 
   let iconsRef = [];
@@ -186,6 +189,7 @@ const updateFeeds = async () => {
     }
 
     if (!onlyThese.includes(feed.username)) continue;
+    //if (feed.username !== 'rutgers') continue;
     await updateFeed(feed);
   }
 };
