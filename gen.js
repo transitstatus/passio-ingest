@@ -3,6 +3,7 @@ const simplify = require('@turf/simplify');
 const sharp = require('sharp');
 
 const feeds = JSON.parse(fs.readFileSync('./feeds.json', 'utf8')).all;
+const extraConfig = JSON.parse(fs.readFileSync('./extraConfig.json', 'utf8'));
 
 const keyGen = () => "pseudo101_" + 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
   var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -90,7 +91,6 @@ const updateFeed = async (feed) => {
     if ((route.color === '#FF00FF' || route.color === '#ff00ff') && feed.username === 'rutgers') {
       console.log('THIS ONE ITS THIS ONE RIGHT HERE THIS ONE YOU FUCKER')
 
-
       console.log(route);
 
     }
@@ -174,9 +174,17 @@ const updateFeed = async (feed) => {
 };
 
 const updateFeeds = async () => {
-  const onlyThese = ['rutgers', 'chicago', 'gcsu', 'georgiast', 'gatech', 'sundiego', 'columbia', 'elonedu', 'emory', 'GASO', 'mit', 'newyork'];
+  const onlyThese = ['rutgers', 'chicago', 'gcsu', 'georgiast', 'gatech', 'GASO', 'mit', 'newyork', 'uncc', 'uncg', 'uncw', 'bamabama'];
   for (let i = 0; i < feeds.length; i++) {
-    const feed = feeds[i];
+    let feed = feeds[i];
+
+    if (extraConfig[feed.username]) {
+      feed = {
+        ...feed,
+        ...extraConfig[feed.username],
+      };
+    }
+
     if (!onlyThese.includes(feed.username)) continue;
     await updateFeed(feed);
   }
