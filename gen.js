@@ -177,7 +177,7 @@ const updateFeed = async (feed) => {
 };
 
 const updateFeeds = async () => {
-  const onlyThese = ['rutgers', 'chicago', 'gcsu', 'georgiast', 'gatech', 'GASO', 'mit', 'newyork', 'uncc', 'uncg', 'uncw', 'bamabama'];
+  const onlyThese = ['rutgers', 'chicago', 'gcsu', 'georgiast', 'gatech', 'GASO', 'mit', 'newyork', 'uncc', 'uncg', 'uncw', 'bamabama', 'ncstateuni'];
   for (let i = 0; i < feeds.length; i++) {
     let feed = feeds[i];
 
