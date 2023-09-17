@@ -161,6 +161,9 @@ const updateFeed = async (feed) => {
     return {
       type: 'Feature',
       properties: {
+        routeID: route.myid,
+        routeShortName: route.shortName ?? '',
+        routeLongName: route.nameOrig,
         routeColor: `#${routeColor === '000000' ? 'FFFFFF' : routeColor}`,
       },
       geometry: {
