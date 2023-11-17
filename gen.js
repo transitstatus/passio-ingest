@@ -119,7 +119,7 @@ const updateFeed = async (feed) => {
       });
 
     sharp(arrowBuffer)
-      .resize(112, 112)
+      .resize(120, 120)
       .png()
       .toFile(`./data/${feed.username}/icons/${actualColor.toUpperCase()}_arrow.png`, (err, info) => {
         if (err) throw err;
