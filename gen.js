@@ -12,6 +12,9 @@ const keyGen = () => "pseudo101_" + 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.repla
 
 const average = array => array.reduce((a, b) => a + b) / array.length;
 
+let shapesList = [];
+let imagesList = [];
+
 const updateFeed = async (feed) => {
   if (!fs.existsSync(`./data/${feed.username}`)) {
     fs.mkdirSync(`./data/${feed.username}`);
@@ -129,6 +132,9 @@ const updateFeed = async (feed) => {
   });
 
   fs.writeFileSync(`./data/${feed.username}/icons.json`, JSON.stringify(iconsRef));
+  imagesList.push(...iconsRef.map((n) => {
+    return `https://passio.piemadd.com/data/${feed.username}/icons/${n}`
+  }));
 
   const rawLines = Object.keys(stops.routePoints).map((routeKey) => {
     const route = routes.find((route) => route.myid === routeKey);
@@ -177,7 +183,7 @@ const updateFeed = async (feed) => {
         routeID: route.myid,
         routeShortName: route.shortName ?? '',
         routeLongName: route.nameOrig,
-        routeColor: `#${routeColor === '000000' ? 'FFFFFF' : routeColor}`,
+        routeColor: `#${routeColor === '000000' ? 'FFFFFF' : (routeColor === 'FFFFFF' ? '000000' : routeColor)}`,
       },
       geometry: {
         type: 'MultiLineString',
@@ -190,6 +196,7 @@ const updateFeed = async (feed) => {
     type: 'FeatureCollection',
     features: rawLines.filter((rawLine) => rawLine !== null),
   }));
+  shapesList.push(`https://passio.piemadd.com/data/${feed.username}/shapes.json`);
 };
 
 const updateFeeds = async () => {
@@ -208,6 +215,8 @@ const updateFeeds = async () => {
     //if (feed.username !== 'rutgers') continue;
     await updateFeed(feed);
   }
+  fs.writeFileSync('./allIcons.json', JSON.stringify(imagesList));
+  fs.writeFileSync('./allShapes.json', JSON.stringify(shapesList));
 };
 
 if (fs.existsSync('./data')) {
