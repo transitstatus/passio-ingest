@@ -14,6 +14,7 @@ const average = array => array.reduce((a, b) => a + b) / array.length;
 
 let shapesList = [];
 let imagesList = [];
+let colorsList = [];
 
 const updateFeed = async (feed) => {
   if (!fs.existsSync(`./data/${feed.username}`)) {
@@ -86,8 +87,8 @@ const updateFeed = async (feed) => {
   const routes = await routesReq.json();
   const stops = await stopsReq.json();
 
-  fs.writeFileSync('./routes.json', JSON.stringify(routes));
-  fs.writeFileSync('./stops.json', JSON.stringify(stops));
+  //fs.writeFileSync('./routes.json', JSON.stringify(routes));
+  //fs.writeFileSync('./stops.json', JSON.stringify(stops));
 
   const busTemplate = fs.readFileSync('./templates/bus.svg', 'utf8');
   const arrowTemplate = fs.readFileSync('./templates/arrow.svg', 'utf8');
@@ -129,11 +130,12 @@ const updateFeed = async (feed) => {
         //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
 
+    colorsList.push(`${actualColor}_${feed.black && feed.black.includes(routeColor[1]) ? '000000' : 'FFFFFF'}`);
   });
 
   fs.writeFileSync(`./data/${feed.username}/icons.json`, JSON.stringify(iconsRef));
   imagesList.push(...iconsRef.map((n) => {
-    return `https://passio.piemadd.com/data/${feed.username}/icons/${n}`
+    return `${feed.username}/icons/${n}`
   }));
 
   const rawLines = Object.keys(stops.routePoints).map((routeKey) => {
@@ -162,11 +164,11 @@ const updateFeed = async (feed) => {
 
       const filteredRoutePoints = routePoints.filter((routePoint) => routePoint !== null);
 
-      if (filteredRoutePoints.length === 0) return null;
+      if (filteredRoutePoints.length < 2) return null;
 
       const simplifiedRoutePoints = simplify({
         type: 'LineString',
-        coordinates: routePoints.filter((routePoint) => routePoint !== null),
+        coordinates: filteredRoutePoints.filter((routePoint) => routePoint !== null),
       }, {
         tolerance: 0.00001,
         highQuality: true,
@@ -184,6 +186,7 @@ const updateFeed = async (feed) => {
         routeShortName: route.shortName ?? '',
         routeLongName: route.nameOrig,
         routeColor: `#${routeColor === '000000' ? 'FFFFFF' : (routeColor === 'FFFFFF' ? '000000' : routeColor)}`,
+        minZoom: 8,
       },
       geometry: {
         type: 'MultiLineString',
@@ -196,7 +199,7 @@ const updateFeed = async (feed) => {
     type: 'FeatureCollection',
     features: rawLines.filter((rawLine) => rawLine !== null),
   }));
-  shapesList.push(`https://passio.piemadd.com/data/${feed.username}/shapes.json`);
+  shapesList.push(`/${feed.username}/shapes.json`);
 };
 
 const updateFeeds = async () => {
@@ -211,12 +214,13 @@ const updateFeeds = async () => {
       };
     }
 
-    if (!onlyThese.includes(feed.username)) continue;
-    //if (feed.username !== 'rutgers') continue;
+    //if (!onlyThese.includes(feed.username)) continue;
+    //if (feed.username !== 'radford') continue;
     await updateFeed(feed);
   }
   fs.writeFileSync('./allIcons.json', JSON.stringify(imagesList));
   fs.writeFileSync('./allShapes.json', JSON.stringify(shapesList));
+  fs.writeFileSync('./colorsList.json', JSON.stringify([...new Set(colorsList.sort())]));
 };
 
 if (fs.existsSync('./data')) {
