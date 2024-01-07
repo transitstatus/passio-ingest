@@ -202,7 +202,7 @@ const updateFeed = async (feed) => {
     type: 'FeatureCollection',
     features: rawLines.filter((rawLine) => rawLine !== null),
   }));
-  shapesList.push(`/${feed.username}/shapes.json`);
+  shapesList.push(`${feed.username}/shapes.json`);
 };
 
 const updateFeeds = async () => {
