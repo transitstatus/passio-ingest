@@ -4,6 +4,7 @@ const sharp = require('sharp');
 
 const feeds = JSON.parse(fs.readFileSync('./feeds.json', 'utf8')).all;
 const extraConfig = JSON.parse(fs.readFileSync('./extraConfig.json', 'utf8'));
+const globalConfig = JSON.parse(fs.readFileSync('./globalConfig.json', 'utf8'));
 
 const keyGen = () => "pseudo101_" + 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
   var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -104,7 +105,9 @@ const updateFeed = async (feed) => {
     }
     return [route.color.replace('#', ''), route.myid]
   }).forEach((routeColor) => {
-    const actualColor = routeColor[0].toString().toUpperCase();
+    let actualColor = routeColor[0].toString().toUpperCase();
+
+    if (globalConfig.colorReplacements[actualColor]) actualColor = globalConfig.colorReplacements[actualColor];
 
     const busIcon = busTemplate.replaceAll("#FFFFFF", `#${actualColor}`).replaceAll("#000000", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const busBuffer = Buffer.from(busIcon, 'utf8');
