@@ -97,12 +97,6 @@ const updateFeed = async (feed) => {
   let iconsRef = [];
 
   routes.map((route) => {
-    if ((route.color === '#FF00FF' || route.color === '#ff00ff') && feed.username === 'rutgers') {
-      console.log('THIS ONE ITS THIS ONE RIGHT HERE THIS ONE YOU FUCKER')
-
-      console.log(route);
-
-    }
     return [route.color.replace('#', ''), route.myid]
   }).forEach((routeColor) => {
     let actualColor = routeColor[0].toString().toUpperCase();
@@ -185,7 +179,7 @@ const updateFeed = async (feed) => {
     return {
       type: 'Feature',
       properties: {
-        routeID: route.myid,
+        routeID: feed.combineBasedOnName ? (route.shortName.length > 0 ? route.shortName : route.nameOrig) : route.myid,
         routeShortName: route.shortName ?? '',
         routeLongName: route.nameOrig,
         routeColor: `#${routeColor === '000000' ? 'FFFFFF' : (routeColor === 'FFFFFF' ? '000000' : routeColor)}`,
