@@ -103,11 +103,13 @@ const updateFeed = async (feed) => {
 
     if (globalConfig.colorReplacements[actualColor]) actualColor = globalConfig.colorReplacements[actualColor];
 
-    const busIcon = busTemplate.replaceAll("#FFFFFF", `#${actualColor}`).replaceAll("#000000", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
+    console.log(actualColor, routeColor[1])
+
+    const busIcon = busTemplate.replaceAll("FILL", `#${actualColor}`).replaceAll("BORDERS", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const busBuffer = Buffer.from(busIcon, 'utf8');
     iconsRef.push(`${actualColor.toUpperCase()}_bus.png`);
 
-    const arrowIcon = arrowTemplate.replaceAll("#FFFFFF", `#${actualColor}`).replaceAll("#000000", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
+    const arrowIcon = arrowTemplate.replaceAll("FILL", `#${actualColor}`).replaceAll("BORDERS", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const arrowBuffer = Buffer.from(arrowIcon, 'utf8');
     iconsRef.push(`${actualColor.toUpperCase()}_arrow.png`);
 
@@ -212,7 +214,7 @@ const updateFeeds = async () => {
     }
 
     //if (!onlyThese.includes(feed.username)) continue;
-    //if (feed.username !== 'radford') continue;
+    //if (feed.username !== 'rutgers') continue;
     await updateFeed(feed);
   }
   fs.writeFileSync('./allIcons.json', JSON.stringify(imagesList));
