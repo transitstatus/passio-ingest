@@ -1,8 +1,12 @@
 {
   "colorReplacements": {
     "LIME": "00FF00",
+    "lime": "00FF00",
     "PURPLE": "800080",
+    "purple": "800080",
     "RED": "FF0000",
-    "YELLOW": "FFFF00"
+    "red": "FF0000",
+    "YELLOW": "FFFF00",
+    "yellow": "FFFF00"
   }
 }

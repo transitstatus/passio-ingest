@@ -151,7 +151,8 @@ const updateFeed = async (feed) => {
       }
     }
 
-    const routeColor = route.color.replace('#', '');
+    let routeColor = route.color.replace('#', '');
+    if (globalConfig.colorReplacements[routeColor]) routeColor = globalConfig.colorReplacements[routeColor];
 
     //console.log(stops.routePoints[routeKey])
     const routeLines = stops.routePoints[routeKey].map((routeLine) => {
@@ -214,7 +215,7 @@ const updateFeeds = async () => {
     }
 
     //if (!onlyThese.includes(feed.username)) continue;
-    //if (feed.username !== 'rutgers') continue;
+    //if (feed.username !== 'unm') continue;
     await updateFeed(feed);
   }
   fs.writeFileSync('./allIcons.json', JSON.stringify(imagesList));
