@@ -27,11 +27,11 @@ const updateFeed = async (feed) => {
 
   console.log('Updating feed', feed.fullname);
 
+  /*
   const deviceIdReq = await fetch(`https://passiogo.com/goServices.php?register=1&deviceId=0&token=${key}&platform=web&buildNo=undefined&oldToken=`, {
     "headers": {
       'Host': 'rutgers.passiogo.com',
       'User-Agent': 'Mozilla/ 5.0(Windows NT 10.0; Win64; x64; rv: 109.0) Gecko / 20100101 Firefox / 116.0',
-      'Accept': 'application / json, text / javascript, */*; q=0.01',
       'Accept-Language': 'en-US,en;q=0.5',
       'Accept-Encoding': 'gzip, deflate, br',
       'X-Requested-With': 'XMLHttpRequest',
@@ -45,6 +45,9 @@ const updateFeed = async (feed) => {
     "method": "GET",
   });
   const { deviceId } = await deviceIdReq.json();
+  */
+
+  const deviceId = 64638265; //cheeky bastard moment
 
   const routesForm = `json=%7B%22systemSelected0%22%3A%22${feed.id}%22%2C%22amount%22%3A1%7D`;
   const stopsForm = `json=%7B%22s0%22%3A%22${feed.id}%22%2C%22sA%22%3A1%7D`;
@@ -166,6 +169,7 @@ const updateFeed = async (feed) => {
 
       if (filteredRoutePoints.length < 2) return null;
 
+      /*
       const simplifiedRoutePoints = simplify({
         type: 'LineString',
         coordinates: filteredRoutePoints.filter((routePoint) => routePoint !== null),
@@ -173,6 +177,9 @@ const updateFeed = async (feed) => {
         tolerance: 0.00001,
         highQuality: true,
       });
+      */
+
+      return filteredRoutePoints.filter((routePoint) => routePoint !== null);
 
       //console.log(simplifiedRoutePoints);
 
