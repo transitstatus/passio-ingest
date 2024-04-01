@@ -95,6 +95,7 @@ const updateFeed = async (feed) => {
   //fs.writeFileSync('./stops.json', JSON.stringify(stops));
 
   const busTemplate = fs.readFileSync('./templates/bus.svg', 'utf8');
+  const circleTemplate = fs.readFileSync('./templates/circle.svg', 'utf8');
   const arrowTemplate = fs.readFileSync('./templates/arrow.svg', 'utf8');
 
   let iconsRef = [];
@@ -116,6 +117,10 @@ const updateFeed = async (feed) => {
     const arrowBuffer = Buffer.from(arrowIcon, 'utf8');
     iconsRef.push(`${actualColor.toUpperCase()}_arrow.png`);
 
+    const circleIcon = circleTemplate.replaceAll("FILL", `#${actualColor}`).replaceAll("BORDERS", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
+    const circleBuffer = Buffer.from(circleIcon, 'utf8');
+    iconsRef.push(`${actualColor.toUpperCase()}_circle.png`);
+
     sharp(busBuffer)
       .resize(64, 64)
       .png()
@@ -128,6 +133,14 @@ const updateFeed = async (feed) => {
       .resize(120, 120)
       .png()
       .toFile(`./data/${feed.username}/icons/${actualColor.toUpperCase()}_arrow.png`, (err, info) => {
+        if (err) throw err;
+        //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
+      });
+
+      sharp(circleBuffer)
+      .resize(64, 64)
+      .png()
+      .toFile(`./data/${feed.username}/icons/${actualColor.toUpperCase()}_circle.png`, (err, info) => {
         if (err) throw err;
         //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
