@@ -91,6 +91,8 @@ const updateFeed = async (feed) => {
   const routes = await routesReq.json();
   const stops = await stopsReq.json();
 
+  if (routes.error || stops.error) return; //this agency is invalid
+
   //fs.writeFileSync('./routes.json', JSON.stringify(routes));
   //fs.writeFileSync('./stops.json', JSON.stringify(stops));
 
@@ -107,7 +109,7 @@ const updateFeed = async (feed) => {
 
     if (globalConfig.colorReplacements[actualColor]) actualColor = globalConfig.colorReplacements[actualColor];
 
-    console.log(actualColor, routeColor[1])
+    //console.log(actualColor, routeColor[1])
 
     const busIcon = busTemplate.replaceAll("FILL", `#${actualColor}`).replaceAll("BORDERS", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const busBuffer = Buffer.from(busIcon, 'utf8');
@@ -160,6 +162,7 @@ const updateFeed = async (feed) => {
       type: 'feature',
       properties: {
         routeColor: '#FFFFFF',
+        routeType: '3',
       },
       geometry: {
         type: 'MultiLineString',
