@@ -123,6 +123,7 @@ const updateFeed = async (feed) => {
     const circleBuffer = Buffer.from(circleIcon, 'utf8');
     iconsRef.push(`${actualColor.toUpperCase()}_circle.png`);
 
+    /*
     sharp(busBuffer)
       .resize(64, 64)
       .png()
@@ -130,6 +131,7 @@ const updateFeed = async (feed) => {
         if (err) throw err;
         //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
+      */
 
     sharp(arrowBuffer)
       .resize(120, 120)
@@ -138,7 +140,7 @@ const updateFeed = async (feed) => {
         if (err) throw err;
         //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
-
+      
       sharp(circleBuffer)
       .resize(64, 64)
       .png()
