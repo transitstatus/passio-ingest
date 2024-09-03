@@ -59,7 +59,6 @@ const updateFeed = async (feed) => {
       "Accept": "application/json, text/javascript, */*; q=0.01",
       "Accept-Language": "en-US,en;q=0.5",
       "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-      'Contact': 'I know I am not meant to be here. If you would like to contact me, i am available at passiogosucksass@piemadd.com',
       "Sec-Fetch-Dest": "empty",
       "Sec-Fetch-Mode": "cors",
       "Sec-Fetch-Site": "cross-site"
@@ -77,7 +76,6 @@ const updateFeed = async (feed) => {
       "Accept": "application/json, text/javascript, */*; q=0.01",
       "Accept-Language": "en-US,en;q=0.5",
       "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-      'Contact': 'I know I am not meant to be here. If you would like to contact me, i am available at passiogosucksass@piemadd.com',
       "Sec-Fetch-Dest": "empty",
       "Sec-Fetch-Mode": "cors",
       "Sec-Fetch-Site": "cross-site"
