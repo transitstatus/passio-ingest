@@ -109,6 +109,7 @@ const updateFeed = async (feed) => {
 
     //console.log(actualColor, routeColor[1])
 
+    /*
     const busIcon = busTemplate.replaceAll("FILL", `#${actualColor}`).replaceAll("BORDERS", feed.black && feed.black.includes(routeColor[1]) ? '#000000' : '#FFFFFF');
     const busBuffer = Buffer.from(busIcon, 'utf8');
     iconsRef.push(`${actualColor.toUpperCase()}_bus.png`);
@@ -121,7 +122,6 @@ const updateFeed = async (feed) => {
     const circleBuffer = Buffer.from(circleIcon, 'utf8');
     iconsRef.push(`${actualColor.toUpperCase()}_circle.png`);
 
-    /*
     sharp(busBuffer)
       .resize(64, 64)
       .png()
@@ -131,6 +131,7 @@ const updateFeed = async (feed) => {
       });
       */
 
+      /*
     sharp(arrowBuffer)
       .resize(120, 120)
       .png()
@@ -146,6 +147,7 @@ const updateFeed = async (feed) => {
         if (err) throw err;
         //console.log(`${routeColor[0]}_bus.png generated for ${feed.fullname}`)
       });
+    */
 
     colorsList.push(`${actualColor}_${feed.black && feed.black.includes(routeColor[1]) ? '000000' : 'FFFFFF'}`);
   });
