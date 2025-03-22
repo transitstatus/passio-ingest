@@ -185,10 +185,10 @@
       "username": "BeaconCollege11",
       "goAgencyName": null,
       "id": "3389",
-      "email": "www.beaconcollege.edu",
+      "email": "",
       "goTestMode": "0",
       "name2": "1",
-      "homepage": "",
+      "homepage": "https:\/\/www.beaconcollege.edu",
       "logo": 0,
       "goRoutePlannerEnabled": "0",
       "goColor": null,
@@ -346,7 +346,7 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "Calabasas Transit",
+      "fullname": "Calabasas Transit (LAZ Parking)",
       "username": "calabasas",
       "goAgencyName": null,
       "id": "5211",
@@ -406,7 +406,7 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "Century Village (FT)",
+      "fullname": "Century Village (TD)",
       "username": "century",
       "goAgencyName": null,
       "id": "444",
@@ -496,6 +496,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Chestnut Ridge",
+      "username": "chestnutridge",
+      "goAgencyName": "Chestnut Ridge",
+      "id": "5659",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/wedriveu.com\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "CHOA",
       "username": "choa",
       "goAgencyName": "CHOA",
@@ -548,7 +563,7 @@
       "email": "support@passiogo.com",
       "goTestMode": "0",
       "name2": "1",
-      "homepage": "",
+      "homepage": "https:\/\/www.bangormaine.gov\/634\/Community-Connector",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
       "goColor": "#1f77b4",
@@ -1268,7 +1283,7 @@
       "email": "transportation@endicott.edu",
       "goTestMode": "0",
       "name2": "0",
-      "homepage": "endicott.edu",
+      "homepage": "https:\/\/endicott.edu",
       "logo": 0,
       "goRoutePlannerEnabled": "0",
       "goColor": "#111680",
@@ -1406,7 +1421,7 @@
       "homepage": "https:\/\/parking.fiu.edu\/commuting-to-fiu\/index.html",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
-      "goColor": "#000080",
+      "goColor": "#081E3F",
       "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
@@ -1728,7 +1743,7 @@
     {
       "fullname": "Hollins University",
       "username": "hollinsshuttle",
-      "goAgencyName": null,
+      "goAgencyName": "Hollins University",
       "id": "3014",
       "email": "hello@goridesource.com",
       "goTestMode": "0",
@@ -1736,7 +1751,7 @@
       "homepage": "https:\/\/www.hollinsshuttle.com",
       "logo": 0,
       "goRoutePlannerEnabled": "0",
-      "goColor": null,
+      "goColor": "#006948",
       "goSupportEmail": "hello@goridesource.com",
       "goAuthenticationType": "0"
     },
@@ -2103,7 +2118,7 @@
     {
       "fullname": "MIT",
       "username": "mit",
-      "goAgencyName": null,
+      "goAgencyName": "MIT",
       "id": "94",
       "email": "shuttles@mit.edu",
       "goTestMode": "0",
@@ -2303,7 +2318,7 @@
       "email": "hello@goridesource.com",
       "goTestMode": "0",
       "name2": "1",
-      "homepage": "www.hollinsshuttle.com",
+      "homepage": "https:\/\/www.hollinsshuttle.com",
       "logo": 0,
       "goRoutePlannerEnabled": "0",
       "goColor": null,
@@ -2756,7 +2771,7 @@
       "homepage": "http:\/\/www.smarttransit.org\/",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
-      "goColor": null,
+      "goColor": "#AB0534",
       "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
@@ -2866,9 +2881,9 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "State Shuttle (Onyx Equities)",
-      "username": "onyx",
-      "goAgencyName": null,
+      "fullname": "State Shuttle (First Mile Capital)",
+      "username": "Onyx",
+      "goAgencyName": "State Shuttle (First Mile Capital)",
       "id": "2780",
       "email": "bkinney@stateshuttle.com",
       "goTestMode": "0",
@@ -3041,7 +3056,7 @@
       "homepage": "https:\/\/www.thehartford.com\/",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
-      "goColor": "#d62728",
+      "goColor": "#75013f",
       "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
@@ -3765,8 +3780,5 @@
       "goSupportEmail": "contactmart@mrta.us",
       "goAuthenticationType": "0"
     }
-  ],
-  "debug": {
-    "fromCache": 1
-  }
+  ]
 }
