@@ -106,6 +106,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Athens Public Transit",
+      "username": "athenstransit",
+      "goAgencyName": null,
+      "id": "5842",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/hapcap.org\/transportation\/athens-on-demand\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#0232a8",
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "Atlantic Station",
       "username": "atlcarpark",
       "goAgencyName": "Atlantic Station",
@@ -406,6 +421,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Cecil Transit",
+      "username": "cecil",
+      "goAgencyName": "Cecil Transit",
+      "id": "6135",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/www.ccgov.org\/government\/community-services\/cecil-transit",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#29759d",
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "Century Village (TD)",
       "username": "century",
       "goAgencyName": null,
@@ -631,17 +661,17 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "City of Harrisonburg Department of Public Transportation (HDPT)",
-      "username": "harrisonburg",
+      "fullname": "City of Galesburg (CTS)",
+      "username": "galesburg",
       "goAgencyName": null,
-      "id": "2868",
+      "id": "6268",
       "email": "support@passiogo.com",
-      "goTestMode": "1",
+      "goTestMode": "0",
       "name2": "1",
-      "homepage": "https:\/\/www.harrisonburgva.gov\/bus-service",
+      "homepage": "https:\/\/www.ci.galesburg.il.us\/government\/community_development\/public_transportation\/fixedroute.php",
       "logo": 1,
-      "goRoutePlannerEnabled": "1",
-      "goColor": "#1f77b4",
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
       "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
@@ -703,6 +733,21 @@
       "goRoutePlannerEnabled": "0",
       "goColor": null,
       "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "City of Janesville",
+      "username": "janesville",
+      "goAgencyName": "City of Janesville",
+      "id": "5599",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/www.janesvillewi.gov\/JTS",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
     {
@@ -788,26 +833,11 @@
       "email": "",
       "goTestMode": "0",
       "name2": "1",
-      "homepage": "https:\/\/www.ci.sandy.or.us\/transit",
+      "homepage": "http:\/\/www.mthoodexpress.com\/",
       "logo": 0,
       "goRoutePlannerEnabled": "0",
       "goColor": null,
       "goSupportEmail": null,
-      "goAuthenticationType": "0"
-    },
-    {
-      "fullname": "City of Tracy (MTM \/ Tracer Transit)",
-      "username": "CityofTracy",
-      "goAgencyName": null,
-      "id": "2996",
-      "email": "support@passiogo.com",
-      "goTestMode": "0",
-      "name2": "1",
-      "homepage": "http:\/\/www.ridesystems.net",
-      "logo": 1,
-      "goRoutePlannerEnabled": "0",
-      "goColor": null,
-      "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
     {
@@ -838,6 +868,21 @@
       "goRoutePlannerEnabled": "0",
       "goColor": null,
       "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "citylink | LATC",
+      "username": "avcog",
+      "goAgencyName": "citylink | LATC",
+      "id": "5863",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "http:\/\/www.purplebus.org",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#7c5bb4",
+      "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
     {
@@ -1023,7 +1068,7 @@
     {
       "fullname": "Concourse",
       "username": "Concourse",
-      "goAgencyName": null,
+      "goAgencyName": "Concourse",
       "id": "1841",
       "email": "",
       "goTestMode": "0",
@@ -1031,7 +1076,7 @@
       "homepage": "",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
-      "goColor": null,
+      "goColor": "#1f77b4",
       "goSupportEmail": null,
       "goAuthenticationType": "0"
     },
@@ -1096,21 +1141,6 @@
       "goAuthenticationType": "2"
     },
     {
-      "fullname": "Coral Gables",
-      "username": "cgables",
-      "goAgencyName": null,
-      "id": "2787",
-      "email": "\ufeffjfox@academybus.com",
-      "goTestMode": "0",
-      "name2": "0",
-      "homepage": "",
-      "logo": 0,
-      "goRoutePlannerEnabled": "0",
-      "goColor": null,
-      "goSupportEmail": null,
-      "goAuthenticationType": "0"
-    },
-    {
       "fullname": "County Connector",
       "username": "countyconn",
       "goAgencyName": "County Connector",
@@ -1141,6 +1171,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Dana Point Summer Trolley",
+      "username": "dptrolley",
+      "goAgencyName": "Dana Point Summer Trolley",
+      "id": "6059",
+      "email": null,
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": null,
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "Denver International Airport",
       "username": "flydenver",
       "goAgencyName": "Denver International Airport",
@@ -1150,7 +1195,7 @@
       "name2": "1",
       "homepage": "https:\/\/www.flydenver.com\/parking-and-transportation\/",
       "logo": 1,
-      "goRoutePlannerEnabled": "0",
+      "goRoutePlannerEnabled": "1",
       "goColor": "#000000",
       "goSupportEmail": null,
       "goAuthenticationType": "0"
@@ -1441,6 +1486,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Fort Valley State University",
+      "username": "fvsu",
+      "goAgencyName": "Fort Valley State University",
+      "id": "6065",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/www.fvsu.edu\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#205097",
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "Four Points Sheraton (Propark)",
       "username": "4PointsFlushing",
       "goAgencyName": "Four Points Sheraton (Propark)",
@@ -1645,7 +1705,7 @@
       "name2": "1",
       "homepage": "http:\/\/www.harfordcountymd.gov\/213\/Harford-Transit-LINK",
       "logo": 1,
-      "goRoutePlannerEnabled": "0",
+      "goRoutePlannerEnabled": "1",
       "goColor": "#3182bd",
       "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
@@ -1663,6 +1723,21 @@
       "goRoutePlannerEnabled": "0",
       "goColor": "#393b79",
       "goSupportEmail": "transit@csd.hctx.net",
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "Harrisonburg Transit",
+      "username": "harrisonburg",
+      "goAgencyName": null,
+      "id": "2868",
+      "email": "support@passiogo.com",
+      "goTestMode": "1",
+      "name2": "1",
+      "homepage": "https:\/\/www.harrisonburgva.gov\/bus-service",
+      "logo": 1,
+      "goRoutePlannerEnabled": "1",
+      "goColor": "#1C355E",
+      "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
     {
@@ -1951,6 +2026,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Laguna Niguel Summer Trolley",
+      "username": "lntrolley",
+      "goAgencyName": "Laguna Niguel Summer Trolley",
+      "id": "6058",
+      "email": null,
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/lntrolley.com\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "Lawrence Transit",
       "username": "lawrencetransit",
       "goAgencyName": "Lawrence Transit",
@@ -2206,21 +2296,6 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "New Hanover County Airport",
-      "username": "nhcairport",
-      "goAgencyName": "New Hanover County Airport",
-      "id": "5596",
-      "email": "support@passiogo.com",
-      "goTestMode": "0",
-      "name2": "0",
-      "homepage": "https:\/\/flyilm.com\/",
-      "logo": 1,
-      "goRoutePlannerEnabled": "0",
-      "goColor": "#1f77b4",
-      "goSupportEmail": "support@passiogo.com",
-      "goAuthenticationType": "0"
-    },
-    {
       "fullname": "New River Transit Authority",
       "username": "beckley",
       "goAgencyName": "New River Transit Authority",
@@ -2296,13 +2371,28 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Oak Ridge National Laboratory",
+      "username": "ornl",
+      "goAgencyName": "Oak Ridge National Laboratory",
+      "id": "6357",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/www.ornl.gov\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#00662C",
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "Orlando International Airport",
       "username": "orlandoaviation",
       "goAgencyName": "Orlando International Airport",
       "id": "4692",
       "email": "support@passiogo.com",
       "goTestMode": "0",
-      "name2": "0",
+      "name2": "1",
       "homepage": "https:\/\/orlandoairports.net",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
@@ -2350,6 +2440,21 @@
       "name2": "0",
       "homepage": "http:\/\/www.pbia.org",
       "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "Pensacola Airport Parking Shuttle",
+      "username": "pensacolaair",
+      "goAgencyName": "Pensacola Airport Parking Shuttle",
+      "id": "3520",
+      "email": "Skearney@lazparking.com",
+      "goTestMode": "0",
+      "name2": "0",
+      "homepage": "",
+      "logo": 0,
       "goRoutePlannerEnabled": "0",
       "goColor": null,
       "goSupportEmail": null,
@@ -2671,6 +2776,51 @@
       "goAuthenticationType": "1"
     },
     {
+      "fullname": "San Clemente Trolley",
+      "username": "sctrolley",
+      "goAgencyName": "San Clemente Trolley",
+      "id": "6061",
+      "email": null,
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": null,
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "San Juan Capistrano Summer Trolley",
+      "username": "scjtrolley",
+      "goAgencyName": "San Juan Capistrano Summer Trolley",
+      "id": "6060",
+      "email": null,
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": null,
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "Santa Fe Trails",
+      "username": "santafenm",
+      "goAgencyName": "Santa Fe Trails",
+      "id": "5880",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/www.santafenm.gov\/transit",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "SAT Parking",
       "username": "satparking",
       "goAgencyName": "SAT Parking",
@@ -2714,21 +2864,6 @@
       "goColor": "#000000",
       "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "2"
-    },
-    {
-      "fullname": "Selkirks-Pend Oreille Transit Authority (SPOT Bus)",
-      "username": "spotbus",
-      "goAgencyName": null,
-      "id": "5698",
-      "email": "support@passiogo.com",
-      "goTestMode": "0",
-      "name2": "1",
-      "homepage": "https:\/\/spotbus.org\/",
-      "logo": 1,
-      "goRoutePlannerEnabled": "0",
-      "goColor": null,
-      "goSupportEmail": "support@passiogo.com",
-      "goAuthenticationType": "0"
     },
     {
       "fullname": "Seneca Transit System",
@@ -2848,6 +2983,21 @@
       "goRoutePlannerEnabled": "0",
       "goColor": null,
       "goSupportEmail": "support@passiotech.com",
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "SPOT Bus (Selkirks - Pend Oreille Transit)",
+      "username": "spotbus",
+      "goAgencyName": "SPOT Bus (Selkirks - Pend Oreille Transit)",
+      "id": "5698",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/spotbus.org\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
     {
@@ -3076,6 +3226,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Town Center Trolley",
+      "username": "woodlandstransit",
+      "goAgencyName": "Town Center Trolley",
+      "id": "5962",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/www.thewoodlandstownship-tx.gov\/96\/Transportation",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#637939",
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "Township of West Orange",
       "username": "westorange",
       "goAgencyName": null,
@@ -3097,7 +3262,7 @@
       "id": "2153",
       "email": "support@passiogo.com",
       "goTestMode": "0",
-      "name2": "0",
+      "name2": "1",
       "homepage": "",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
@@ -3241,17 +3406,17 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "UNC Greensboro (UNCG)",
+      "fullname": "UNC Greensboro",
       "username": "uncg",
-      "goAgencyName": null,
+      "goAgencyName": "UNC Greensboro",
       "id": "2874",
       "email": "",
       "goTestMode": "0",
       "name2": "0",
       "homepage": "https:\/\/parking.uncg.edu\/",
-      "logo": 0,
+      "logo": 1,
       "goRoutePlannerEnabled": "1",
-      "goColor": null,
+      "goColor": "#0F2044",
       "goSupportEmail": null,
       "goAuthenticationType": "0"
     },
@@ -3308,7 +3473,7 @@
       "email": "parking@ufl.edu",
       "goTestMode": "0",
       "name2": "0",
-      "homepage": "www.taps.ufl.edu",
+      "homepage": "taps.ufl.edu",
       "logo": 1,
       "goRoutePlannerEnabled": "0",
       "goColor": "#1f77b4",
@@ -3361,9 +3526,9 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "University of Miami Medical Center (Reef Parking)",
+      "fullname": "University of Miami Medical Center (Lanier Parking))",
       "username": "miamimedical",
-      "goAgencyName": "University of Miami Medical Center (Reef Parking)",
+      "goAgencyName": "University of Miami Medical Center (Lanier Parking))",
       "id": "4201",
       "email": "support@passiogo.com",
       "goTestMode": "0",
@@ -3511,7 +3676,7 @@
       "goAuthenticationType": "0"
     },
     {
-      "fullname": "University of Wisconsin-Milwaukee",
+      "fullname": "University of Wisconsin-Milwaukee (GO Riteway)",
       "username": "milwaukee",
       "goAgencyName": null,
       "id": "728",
@@ -3552,6 +3717,21 @@
       "logo": 1,
       "goRoutePlannerEnabled": "0",
       "goColor": null,
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "Valdosta State University ",
+      "username": "valdosta",
+      "goAgencyName": "Valdosta State University ",
+      "id": "6090",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "0",
+      "homepage": "https:\/\/www.valdosta.edu\/administration\/finance-admin\/auxiliary-services\/parking\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#d62728",
       "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
@@ -3646,6 +3826,21 @@
       "goAuthenticationType": "0"
     },
     {
+      "fullname": "Washington County Transit (WCT)",
+      "username": "washco",
+      "goAgencyName": null,
+      "id": "5594",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/www.washco-md.net\/transit\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": null,
+      "goSupportEmail": "support@passiogo.com",
+      "goAuthenticationType": "0"
+    },
+    {
       "fullname": "WaterColor Community Association",
       "username": "watercolor",
       "goAgencyName": "WaterColor Community Association",
@@ -3703,6 +3898,21 @@
       "goRoutePlannerEnabled": "0",
       "goColor": null,
       "goSupportEmail": null,
+      "goAuthenticationType": "0"
+    },
+    {
+      "fullname": "Wilmington International Airport",
+      "username": "nhcairport",
+      "goAgencyName": "Wilmington International Airport",
+      "id": "5596",
+      "email": "support@passiogo.com",
+      "goTestMode": "0",
+      "name2": "1",
+      "homepage": "https:\/\/flyilm.com\/",
+      "logo": 1,
+      "goRoutePlannerEnabled": "0",
+      "goColor": "#1f77b4",
+      "goSupportEmail": "support@passiogo.com",
       "goAuthenticationType": "0"
     },
     {
